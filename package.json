@@ -1,5 +1,5 @@
 {
-  "name": "Grunt and Sass Boilerplate",
+  "name": "grunt-sass-boilerplate",
   "version": "1.0.0",
   "description": "Utility tool for grunt and sass.",
   "main": "Gruntfile.js",
