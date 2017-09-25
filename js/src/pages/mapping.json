@@ -1,0 +1,9 @@
+{
+    "testpage": {
+        "src": [
+            "js/src/widgets/testwidget.js",
+            "js/src/pages/testpage.js"
+        ],
+        "dest": "js/dist/testpage.js"
+    }
+}
