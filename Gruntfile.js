@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 
     var pageJSConsolidatedMaps = grunt.file.readJSON('js/src/pages/mapping.json');
     var commonJSFiles = grunt.file.readJSON('js/src/common/mapping.json');
-    var pageJSWidgetsMaps = grunt.file.readJSON('js/src/widgets/mapping.json');
+    // var pageJSWidgetsMaps = grunt.file.readJSON('js/src/widgets/mapping.json');
     var JSFiles = [];
 
     var env = grunt.option('env') || 'dev';
@@ -51,16 +51,16 @@ module.exports = function(grunt) {
         }
     }
 
-    if (typeof pageJSWidgetsMaps !== "undefined" && getSize(pageJSWidgetsMaps) > 0) {
-        for (var widget in pageJSWidgetsMaps) {
-            if (pageJSWidgetsMaps.hasOwnProperty(widget)) {
-                if ( is_page ) {
-                    pageJSWidgetsMaps[widget].src = [ pageJSWidgetsMaps[widget].src.slice(-1)[0] ];
-                }
-                JSFiles.push(pageJSWidgetsMaps[widget]);
-            }
-        }
-    }
+    //     if (typeof pageJSWidgetsMaps !== "undefined" && getSize(pageJSWidgetsMaps) > 0) {
+    //         for (var widget in pageJSWidgetsMaps) {
+    //             if (pageJSWidgetsMaps.hasOwnProperty(widget)) {
+    //                 if ( is_page ) {
+    //                     pageJSWidgetsMaps[widget].src = [ pageJSWidgetsMaps[widget].src.slice(-1)[0] ];
+    //                 }
+    //                 JSFiles.push(pageJSWidgetsMaps[widget]);
+    //             }
+    //         }
+    //     }
 
     grunt.initConfig({
         uglify: {
